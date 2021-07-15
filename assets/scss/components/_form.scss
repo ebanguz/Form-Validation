@@ -1,0 +1,121 @@
+.form {
+	width: 100%;
+	max-width: 500px;
+	padding: 40px 30px;
+	border-radius: 12px;
+	background: white;
+
+	h2 {
+		color: $color-text-form;
+		margin: 0 auto 1rem;
+	}
+	&__div {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 0.6em;
+		padding-bottom: 1.25em;
+
+		label {
+			color: $color-text-form;
+			margin-bottom: 6px;
+			font-weight: $font-weight-bolder;
+		}
+	}
+
+	input {
+		padding: 8px 12px;
+		box-shadow: $color-border;
+		outline: none;
+		border: 0;
+		border-radius: 6px;
+
+		&::placeholder {
+			color: $color-text-placeholder;
+		}
+	}
+
+	.radio input {
+		width: auto;
+		height: 100%;
+		appearance: none;
+		outline: none;
+		cursor: pointer;
+		background: $color-row;
+		color: #728095;
+		transition: all 100ms linear;
+	}
+
+	.radio input:checked {
+		color: #fff;
+		background: #308ef3;
+		box-shadow: 0 1px 1px #0000002e;
+	}
+
+	.radio input:before {
+		content: attr(label);
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+	}
+
+	// ERROR HANDLING
+
+	&__div {
+		i,
+		svg {
+			visibility: hidden;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-29%);
+		}
+		small {
+			visibility: hidden;
+			color: lightcoral;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		&.success {
+			input {
+				box-shadow: $color-border-success;
+			}
+			.fa-check-circle {
+				visibility: visible;
+				color: green;
+			}
+		}
+
+		&.error {
+			input {
+				box-shadow: $color-border-error;
+			}
+			.fa-exclamation-circle {
+				visibility: visible;
+				color: red;
+			}
+
+			small {
+				visibility: visible;
+			}
+		}
+	}
+	// // // //
+}
+
+.btn {
+	position: relative;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	&--submit {
+		padding: 0.5em 1.4em;
+		margin-left: auto;
+		color: $color-background;
+		background: $color-button;
+		border: 0;
+		border-radius: 8px;
+	}
+}

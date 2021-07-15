@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/main.min.css" />
+		<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<div class="container">
+			<form class="form" action="">
+				<h2>Create Account</h2>
+
+				<input type="hidden" id="user-id" />
+				<div class="form__div">
+					<label for="username">Username</label>
+					<input class="form__username" type="text" name="username" id="username" placeholder="userna90" title="" />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form__div">
+					<label for="email">E-mail</label>
+					<input class="form__email" type="email" name="email" id="email" placeholder="eban@gmail.com" title="" />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form__div form__div--gender">
+					<label for="gender">Gender</label>
+					<div class="radio">
+						<input class="form__radio" label="Male" type="radio" id="male" name="gender" value="M" />
+						<input class="form__radio" label="Female" type="radio" id="female" name="gender" value="F" />
+						<input class="form__radio" label="Other" type="radio" id="other" name="gender" value="O" />
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+						<small>Error message</small>
+					</div>
+				</div>
+				<div class="form__div">
+					<label for="password">Password</label>
+					<input class="form__password" type="password" name="password" id="password" placeholder="Password" title="" />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form__div">
+					<label for="password2">Password check</label>
+					<input class="form__password" type="password" name="password2" id="password2" placeholder="Same password" title="" />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<button class="btn btn--submit" type="submit">Submit</button>
+			</form>
+		</div>
+		<script src="./assets/js/app.js"></script>
+	</body>
+</html>
